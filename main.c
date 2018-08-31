@@ -64,3 +64,15 @@ static PyMethodDef methods[] = {
         {"version", (PyCFunction) version, METH_NOARGS, "Returns the current version"},
         {NULL, NULL, 0, NULL}
 };
+
+static struct PyModuleDef moduleDef {
+    PyModuleDef_HEAD_INIT,
+    "moduleDef",
+    "defines the module...durr",
+    -1,
+    methods
+};
+
+PyMODINIT_FUNC PyInit_moduleDef(void){
+    return Pymodule_Create(&moduleDef);
+}
