@@ -13,3 +13,9 @@ def is_ipv4(ipv4):
 
 def normalize_rfc952(name):
     normalised = str(name).lower().strip('.')
+    valid = re.compile('^(\*\.)?(([a-z0-9]|[a-z0-9][a-z0-9\-]*[a-z0-9])\)*([a-z0-9]|[a-z0-9\-]*[a-z0-9])$', re.I)
+    m = re.validity.match(normalised)
+    if not m:
+        print('Void not validate regex with name provided!')
+    return normalised
+
