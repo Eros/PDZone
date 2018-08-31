@@ -1,0 +1,43 @@
+/home/george/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/1C3035D93035BB1A/C/projects/PDZone
+-- The C compiler identification is GNU 7.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- broken
+CMake Error at /home/george/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/share/cmake-3.12/Modules/CMakeTestCCompiler.cmake:52 (message):
+  The C compiler
+
+    "/usr/bin/cc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /mnt/1C3035D93035BB1A/C/projects/PDZone/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command:"/usr/bin/make" "cmTC_5e23d/fast"
+    /usr/bin/make -f CMakeFiles/cmTC_5e23d.dir/build.make CMakeFiles/cmTC_5e23d.dir/build
+    make[1]: Entering directory '/mnt/1C3035D93035BB1A/C/projects/PDZone/cmake-build-debug/CMakeFiles/CMakeTmp'
+    Building C object CMakeFiles/cmTC_5e23d.dir/testCCompiler.c.o
+    /usr/bin/cc    -o CMakeFiles/cmTC_5e23d.dir/testCCompiler.c.o   -c /mnt/1C3035D93035BB1A/C/projects/PDZone/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+    Linking C executable cmTC_5e23d
+    /home/george/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4129.51/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e23d.dir/link.txt --verbose=1
+    /usr/bin/cc      CMakeFiles/cmTC_5e23d.dir/testCCompiler.c.o  -o cmTC_5e23d 
+    /usr/bin/x86_64-linux-gnu-ld: cannot find Scrt1.o: No such file or directory
+    /usr/bin/x86_64-linux-gnu-ld: cannot find crti.o: No such file or directory
+    collect2: error: ld returned 1 exit status
+    CMakeFiles/cmTC_5e23d.dir/build.make:86: recipe for target 'cmTC_5e23d' failed
+    make[1]: *** [cmTC_5e23d] Error 1
+    make[1]: Leaving directory '/mnt/1C3035D93035BB1A/C/projects/PDZone/cmake-build-debug/CMakeFiles/CMakeTmp'
+    Makefile:121: recipe for target 'cmTC_5e23d/fast' failed
+    make: *** [cmTC_5e23d/fast] Error 2
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/mnt/1C3035D93035BB1A/C/projects/PDZone/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/mnt/1C3035D93035BB1A/C/projects/PDZone/cmake-build-debug/CMakeFiles/CMakeError.log".
