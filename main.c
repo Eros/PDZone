@@ -7,7 +7,7 @@
 #include <netinet/in.h>
 #include <Python.h>
 
-int main(int argc, char *argv[]) {
+static int get_ipv4_info(int argc, char *argv[]) {
 
     struct addrinfo hint, *res, p;
     int error;
@@ -46,3 +46,21 @@ int main(int argc, char *argv[]) {
 
     return 0
 }
+
+static PyObject* get_ipv4_info(PyObject* self, Pyobject* argc, PyObject* argv[]){
+    int error;
+    PyObject* addrinfo, hint, *res, p;
+    if(!PyArg_ParseTuple(argc, "i", argv))
+        return NULL;
+    return Py_BuildValue("i", get_ipv4_info(argc, argv));
+};
+
+static PyObject* version(PyObject* self){
+    return Py_BuildValue("s", "Version 1.0")
+}
+
+static PyMethodDef methods[] = {
+        {"get_ipv4_info", get_ipv4_info, METH_VARARGS, "find information from an ipv4 address"},
+        {"version", (PyCFunction) version, METH_NOARGS, "Returns the current version"},
+        {NULL, NULL, 0, NULL}
+};
